@@ -22,7 +22,7 @@
           /></span>
         </p>
         <!-- <h5 class="create"></h5> -->
-        <p class="section_paragraph q-mt-md">CREATE YOUR ACCOUNT</p>
+        <h5 class="create q-mt-md">CREATE YOUR ACCOUNT</h5>
 
         <form @submit.prevent="register">
           <div class="inputs">
@@ -174,7 +174,7 @@
 
       <p class="q-mt-md terms text-white text-center">
         Yes, it was easy and you did it! <br />
-        <span class="row items-center no-wrap">
+        <span class="row justify-center items-center no-wrap">
           check your mail box for next step
           <img
             style="width: 20px; height: 20px"
@@ -226,7 +226,7 @@ import { Notify } from "quasar";
 import axios from "axios";
 
 let val = ref(false);
-let dialog = ref(true);
+let dialog = ref(false);
 let loading = ref(false);
 let categorys = ref([]);
 let data = ref({
@@ -285,10 +285,17 @@ h5.create {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: normal;
 }
-
+p.text-italic {
+  color: #ff26b9 !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: normal;
+}
 @media (max-width: 800px) {
   .grid.container {
     grid-template-columns: 1fr;

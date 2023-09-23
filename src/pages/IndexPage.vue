@@ -4,13 +4,16 @@
       <div class="container">
         <div class="row text justify-end">
           <h3 class="underline_text">
-            Igniting a Revolution in HR Innovation
+            Igniting a Revolution in
+            <span class="typewriter">
+              {{ typedText }}
+            </span>
             <img src="../assets/underline.svg" alt="" />
           </h3>
         </div>
         <div class="grid">
           <div class="left">
-            <h1 class="maintext">
+            <h1 data-reveal class="maintext">
               getlinked Tech
               <img
                 class="creative"
@@ -38,7 +41,9 @@
             </p>
 
             <div class="q-mt-xl">
-              <router-link to="/register" class="btn"> Register </router-link>
+              <router-link :to="{ name: 'register' }" class="btn">
+                Register
+              </router-link>
             </div>
 
             <div class="q-my-xl">
@@ -54,7 +59,7 @@
             </div>
           </div>
           <div class="right">
-            <img src="../assets/herobg.svg" alt="" />
+            <img data-reveal src="../assets/herobg.png" alt="" />
             <!-- <star-blink /> -->
             <img src="../assets/stars.svg" alt="" />
           </div>
@@ -83,17 +88,17 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="overview" class="about">
       <div class="grid container">
         <div class="left">
-          <img src="../assets/bigidea.svg" alt="" />
+          <img data-reveal src="../assets/bigidea.svg" alt="" />
         </div>
         <div class="right">
-          <h4 class="section_maintext">
+          <h4 data-reveal class="section_maintext">
             Introduction to getlinked <br />
             <span class="text-primary"> tech Hackathon 1.0 </span>
           </h4>
-          <p class="section_paragraph">
+          <p data-reveal class="section_paragraph">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you're a coding
             genius, a design maverick, or a concept wizard, you'll have the
@@ -127,14 +132,14 @@
     <section class="rules">
       <div class="grid alt container">
         <div class="left">
-          <img src="../assets/rules.svg" alt="" />
+          <img data-reveal src="../assets/rules.svg" alt="" />
         </div>
         <div class="right">
-          <h4 class="section_maintext">
+          <h4 data-reveal class="section_maintext">
             Rules and <br />
             <span class="text-primary"> Guidelines </span>
           </h4>
-          <p class="section_paragraph">
+          <p data-reveal class="section_paragraph">
             Our tech hackathon is a melting pot of visionaries, and its purpose
             is as clear as day: to shape the future. Whether you're a coding
             genius, a design maverick, or a concept wizard, you'll have the
@@ -164,28 +169,28 @@
     <section class="judge">
       <div class="grid container">
         <div class="left">
-          <img src="../assets/judge.svg" alt="" />
+          <img data-reveal src="../assets/judge.svg" alt="" />
         </div>
         <div class="right">
-          <h4 class="section_maintext">
+          <h4 data-reveal class="section_maintext">
             Judging Criteria <br />
             <span class="text-primary"> Key attributes </span>
           </h4>
           <div>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               <span class="section_paragraph main">
                 Innovation and Creativity: </span
               >Evaluate the uniqueness and creativity of the solution. Consider
               whether it addresses a real-world problem in a novel way or
               introduces innovative features.
             </p>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               <span class="section_paragraph main"> Functionality: </span>
               Assess how well the solution works. Does it perform its intended
               functions effectively and without major issues? Judges would
               consider the completeness and robustness of the solution.
             </p>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               <span class="section_paragraph main">
                 Impact and Relevance:
               </span>
@@ -194,7 +199,7 @@
               target audience? Judges would assess the potential social,
               economic, or environmental benefits.
             </p>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               <span class="section_paragraph main">
                 Technical Complexity:
               </span>
@@ -202,7 +207,7 @@
               would consider the complexity of the code, the use of advanced
               technologies or algorithms, and the scalability of the solution.
             </p>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               <span class="section_paragraph main">
                 Adherence to Hackathon Rules:
               </span>
@@ -242,10 +247,10 @@
       </div>
     </section>
 
-    <section class="faq">
+    <section id="faq" class="faq">
       <div class="grid alt container">
         <div class="left">
-          <img src="../assets/faq.svg" alt="" />
+          <img data-reveal src="../assets/faq.svg" alt="" />
           <div class="qmarks">
             <img
               style="width: 114px; height: 71px"
@@ -265,11 +270,11 @@
           </div>
         </div>
         <div class="right">
-          <h4 class="section_maintext">
+          <h4 data-reveal class="section_maintext">
             Frequently Ask <br />
             <span class="text-primary"> Question </span>
           </h4>
-          <p class="section_paragraph">
+          <p data-reveal class="section_paragraph">
             We got answers to the questions that you might want to ask about
             getlinked Hackathon 1.0
           </p>
@@ -339,9 +344,9 @@
       </div>
     </section>
 
-    <section class="timeline_sec_">
+    <section id="timeline" class="timeline_sec_">
       <div class="text-center">
-        <h4 class="section_maintext">Timeline</h4>
+        <h4 data-reveal class="section_maintext">Timeline</h4>
         <p class="section_paragraph">
           Here is the breakdown of the time we anticipate <br />
           using for the upcoming event.
@@ -374,15 +379,15 @@
     <section class="sec_prizes">
       <div class="grid container">
         <div class="left">
-          <img src="../assets/trophy.svg" alt="" />
+          <img data-reveal src="../assets/trophy.svg" alt="" />
         </div>
         <div class="right">
           <div class="head_text">
-            <h4 class="section_maintext">
+            <h4 data-reveal class="section_maintext">
               Prizes and <br />
               <span class="text-primary"> Rewards </span>
             </h4>
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               Highlight of the prizes or rewards for winners and <br />
               for participants.
             </p>
@@ -391,30 +396,30 @@
           <div class="prizes q-mt-xl">
             <div>
               <img src="../assets/silvermedal.svg" alt="" />
-              <h3>
+              <h3 data-reveal>
                 2nd <br />
                 <span>Runner</span>
               </h3>
 
-              <p class="pricetext">N300,000</p>
+              <p data-reveal class="pricetext">N300,000</p>
             </div>
             <div>
               <img src="../assets/goldmedal.svg" alt="" />
-              <h3>
+              <h3 data-reveal>
                 1st <br />
                 <span>Runner</span>
               </h3>
 
-              <p class="pricetext">N400,000</p>
+              <p data-reveal class="pricetext">N400,000</p>
             </div>
             <div>
               <img src="../assets/bronzemedal.svg" alt="" />
-              <h3>
+              <h3 data-reveal>
                 3rd <br />
                 <span>Runner</span>
               </h3>
 
-              <p class="pricetext">N150,000</p>
+              <p data-reveal class="pricetext">N150,000</p>
             </div>
           </div>
         </div>
@@ -463,8 +468,8 @@
 
     <section class="sec_partners">
       <div class="text-center">
-        <h4 class="section_maintext">Partners and Sponsors</h4>
-        <p class="section_paragraph">
+        <h4 data-reveal class="section_maintext">Partners and Sponsors</h4>
+        <p data-reveal class="section_paragraph">
           Getlinked Hackathon 1.0 is honored to have the following major <br />
           companies as its partners and sponsors
         </p>
@@ -472,22 +477,22 @@
 
       <div class="partners">
         <div class="partner">
-          <img src="../assets/liberty.svg" alt="" />
+          <img data-reveal src="../assets/liberty.svg" alt="" />
         </div>
         <div class="partner">
-          <img src="../assets/libertypay.svg" alt="" />
+          <img data-reveal src="../assets/libertypay.svg" alt="" />
         </div>
         <div class="partner">
-          <img src="../assets/winwise.svg" alt="" />
+          <img data-reveal src="../assets/winwise.svg" alt="" />
         </div>
         <div class="partner">
-          <img src="../assets/whisper.svg" alt="" />
+          <img data-reveal src="../assets/whisper.svg" alt="" />
         </div>
         <div class="partner">
-          <img src="../assets/liberty.svg" alt="" />
+          <img data-reveal src="../assets/paybox.svg" alt="" />
         </div>
         <div class="partner">
-          <img src="../assets/vizualpins.svg" alt="" />
+          <img data-reveal src="../assets/vizualpins.svg" alt="" />
         </div>
       </div>
 
@@ -517,25 +522,25 @@
     <section class="privacy_section">
       <div class="grid alt container">
         <div class="left">
-          <img src="../assets/privacykey.svg" alt="" />
-          <img src="../assets/privacyshield.svg" alt="" />
+          <img data-reveal src="../assets/privacykey.svg" alt="" />
+          <img data-reveal src="../assets/privacyshield.svg" alt="" />
         </div>
         <div class="right">
-          <h4 class="section_maintext">
+          <h4 data-reveal class="section_maintext">
             Privacy Policy and <br />
             <span class="text-primary"> Terms </span>
           </h4>
 
-          <p class="section_paragraph q-mb-lg color">
+          <p data-reveal class="section_paragraph q-mb-lg color">
             Last updated on September 12, 2023
           </p>
-          <p class="section_paragraph">
+          <p data-reveal class="section_paragraph">
             Below are our privacy & policy, which outline a lot of goodies. it’s
             our aim to always take of our participant
           </p>
 
           <div class="privacy">
-            <p class="section_paragraph">
+            <p data-reveal class="section_paragraph">
               At getlinked tech Hackathon 1.0, we value your privacy and are
               committed to protecting your personal information. This Privacy
               Policy outlines how we collect, use, disclose, and safeguard your
@@ -550,7 +555,7 @@
             </p>
 
             <ul>
-              <li>
+              <li data-reveal>
                 <div style="gap: 1rem" class="row no-wrap items-start">
                   <div class="q-mt-sm">
                     <img
@@ -565,7 +570,7 @@
                   </p>
                 </div>
               </li>
-              <li>
+              <li data-reveal>
                 <div style="gap: 1rem" class="row no-wrap items-start">
                   <div>
                     <img
@@ -642,12 +647,33 @@
 <script setup>
 import FooterComp from "src/components/FooterComp.vue";
 import TimelineComp from "src/components/TimelineComp.vue";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 // import StarBlink from "src/components/StarBlink.vue";
+let textToType = "HR Innovation";
+const typedText = ref("");
+let currentIndex = 0;
+
+const typeText = () => {
+  if (currentIndex < textToType.length) {
+    typedText.value += textToType.charAt(currentIndex);
+    currentIndex++;
+    setTimeout(typeText, 350); // Adjust the typing speed as needed
+  } else {
+    setTimeout(resetTypewriter, 1000); // Wait for a moment, then reset
+  }
+};
+
+const resetTypewriter = () => {
+  typedText.value = "";
+  currentIndex = 0;
+  typeText(); // Start typing again
+};
+
 const toggleFaqItem = (index) => {
   console.log(index);
   faqItems.value[index].open = !faqItems.value[index].open;
 };
+
 const faqItems = ref([
   {
     title: "Can I work on a project I started before the hackathon?",
@@ -686,4 +712,42 @@ const faqItems = ref([
     open: false,
   },
 ]);
+
+onMounted(() => {
+  typeText();
+  /**
+   * SCROLL REVEAL
+   */
+
+  const revealElements = document.querySelectorAll("[data-reveal]");
+
+  const scrollReveal = function () {
+    for (let i = 0; i < revealElements.length; i++) {
+      const elementIsInScreen =
+        revealElements[i].getBoundingClientRect().top <
+        window.innerHeight / 1.15;
+
+      if (elementIsInScreen) {
+        revealElements[i].classList.add("revealed");
+      } else {
+        revealElements[i].classList.remove("revealed");
+      }
+    }
+  };
+
+  window.addEventListener("scroll", scrollReveal);
+
+  scrollReveal();
+});
 </script>
+
+<style scoped>
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+  /* width: 0; */
+  transition: all 0.5s ease-out;
+}
+/* .finished {
+  width: auto; } */
+</style>

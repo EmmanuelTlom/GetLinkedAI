@@ -2,8 +2,10 @@
   <footer class="container q-pt-xl">
     <div class="footer_grid">
       <div class="left">
-        <h2 class="footer_main">get<span class="text-primary">linked</span></h2>
-        <p class="terms q-mt-sm">
+        <h2 data-reveal class="footer_main">
+          get<span class="text-primary">linked</span>
+        </h2>
+        <p data-reveal class="terms q-mt-sm">
           Getlinked Tech Hackathon is a technology innovation program
           established by a group of organizations with the aim of showcasing
           young and talented individuals in the field of technology
@@ -18,41 +20,66 @@
         <h5 class="section_paragraph text-primary">Useful Links</h5>
         <div class="links">
           <ul>
-            <li><router-link to="" class="terms"> Overview </router-link></li>
-            <li><router-link to="" class="terms"> Timeline </router-link></li>
-            <li><router-link to="" class="terms"> FAQs </router-link></li>
-            <li>
-              <router-link to="" class="terms"> Register </router-link>
+            <li data-reveal>
+              <q-btn flat no-caps @click="goto('overview')" class="terms">
+                Overview
+              </q-btn>
+            </li>
+            <li data-reveal>
+              <q-btn flat no-caps @click="goto('timeline')" class="terms">
+                Timeline
+              </q-btn>
+            </li>
+            <li data-reveal>
+              <q-btn flat no-caps @click="goto('faq')" class="terms">
+                FAQs
+              </q-btn>
+            </li>
+            <li data-reveal>
+              <router-link :to="{ name: 'register' }" class="terms">
+                Register
+              </router-link>
             </li>
             <li style="gap: 1rem" class="row items-center no-wrap">
-              <span class="text-primary terms"> Follow us</span>
-              <span style="gap: 1rem" class="row items-center">
-                <img
-                  style="width: 24px; height: 24px; flex-shrink: 0"
-                  src="../assets/ig.svg"
-                  alt="" />
-                <img
-                  style="width: 24px; height: 24px; flex-shrink: 0"
-                  src="../assets/x.svg"
-                  alt="" />
-                <img
-                  style="width: 24px; height: 24px; flex-shrink: 0"
-                  src="../assets/fb.svg"
-                  alt="" />
-                <img
-                  style="width: 24px; height: 24px; flex-shrink: 0"
-                  src="../assets/in.svg"
-                  alt=""
-              /></span>
+              <span style="white-space: nowrap" class="text-primary terms">
+                Follow us</span
+              >
+              <span style="gap: 1rem" class="row no-wrap items-center">
+                <a href=""
+                  ><img
+                    style="width: 24px; height: 24px; flex-shrink: 0"
+                    src="../assets/ig.svg"
+                    alt=""
+                /></a>
+                <a href="">
+                  <img
+                    style="width: 24px; height: 24px; flex-shrink: 0"
+                    src="../assets/x.svg"
+                    alt=""
+                /></a>
+
+                <a href=""
+                  ><img
+                    style="width: 24px; height: 24px; flex-shrink: 0"
+                    src="../assets/fb.svg"
+                    alt=""
+                /></a>
+                <a href=""
+                  ><img
+                    style="width: 24px; height: 24px; flex-shrink: 0"
+                    src="../assets/in.svg"
+                    alt=""
+                /></a>
+              </span>
             </li>
           </ul>
         </div>
       </div>
       <div class="right">
-        <h5 class="section_paragraph text-primary">Contact Us</h5>
+        <h5 data-reveal class="section_paragraph text-primary">Contact Us</h5>
         <div class="links">
           <ul>
-            <li style="gap: 1rem" class="row items-center no-wrap">
+            <li data-reveal style="gap: 1rem" class="row items-center no-wrap">
               <img
                 style="width: 12px; height: 12px; flex-shrink: 0"
                 src="../assets/call.svg"
@@ -60,13 +87,13 @@
               />
               <a href="" class="terms"> +234 679 81819 </a>
             </li>
-            <li style="gap: 1rem" class="row no-wrap">
+            <li data-reveal style="gap: 1rem" class="row no-wrap">
               <img
                 style="width: 12px; height: 12px; flex-shrink: 0"
                 src="../assets/location.svg"
                 alt=""
               />
-              <address class="terms">
+              <address data-reveal class="terms">
                 27,Alara Street <br />
                 Yaba 100012 <br />
                 Lagos State
@@ -111,8 +138,10 @@
   </footer>
 </template>
 
-<script>
-export default {};
+<script setup>
+const goto = (arg) => {
+  document.getElementById(arg).scrollIntoView({ behavior: "smooth" });
+};
 </script>
 
 <style lang="sass" scoped></style>

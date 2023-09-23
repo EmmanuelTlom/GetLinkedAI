@@ -13,20 +13,40 @@
 
           <nav>
             <ul>
-              <li>
-                <q-btn class="nav_item" flat no-caps> Timeline </q-btn>
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
+                <q-btn @click="goto('timeline')" class="nav_item" flat no-caps>
+                  Timeline
+                </q-btn>
+              </li>
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
+                <q-btn @click="goto('overview')" class="nav_item" flat no-caps>
+                  Overview
+                </q-btn>
+              </li>
+              <li v-if="this.$router.currentRoute.value.name === 'home'">
+                <q-btn @click="goto('faq')" class="nav_item" flat no-caps>
+                  FAQs
+                </q-btn>
               </li>
               <li>
-                <q-btn class="nav_item" flat no-caps> Overview </q-btn>
+                <q-btn
+                  :to="{ name: 'contact' }"
+                  class="nav_item contact"
+                  flat
+                  no-caps
+                >
+                  Contact
+                </q-btn>
               </li>
               <li>
-                <q-btn class="nav_item" flat no-caps> FAQs </q-btn>
-              </li>
-              <li>
-                <q-btn class="nav_item contact" flat no-caps> Contact </q-btn>
-              </li>
-              <li>
-                <q-btn class="nav_item btn" flat no-caps> Register </q-btn>
+                <q-btn
+                  :to="{ name: 'register' }"
+                  class="nav_item btn"
+                  flat
+                  no-caps
+                >
+                  Register
+                </q-btn>
               </li>
             </ul>
           </nav>
@@ -65,16 +85,43 @@ export default defineComponent({
     };
   },
 
+  // mounted() {
+  //   console.log(this.$router.currentRoute.value.name);
+  // },
+
+  watch: {
+    $route(to, from) {
+      let nav = document.querySelector(".header");
+      let body = document.querySelector("body");
+      console.log(to, from);
+      if (to.name !== from.name) {
+        body.classList.remove("no_scroll");
+        nav.classList.remove("active");
+      }
+      // console.log("first");
+    },
+  },
   methods: {
     toggleNav() {
       let nav = document.querySelector(".header");
+      let body = document.querySelector("body");
 
       if (nav.classList.contains("active")) {
         nav.classList.remove("active");
         nav.classList.add("remove");
+        body.classList.remove("no_scroll");
       } else {
         nav.classList.add("active");
+        body.classList.add("no_scroll");
       }
+    },
+
+    goto(arg) {
+      let body = document.querySelector("body");
+      let nav = document.querySelector(".header");
+      body.classList.remove("no_scroll");
+      nav.classList.remove("active");
+      document.getElementById(arg).scrollIntoView({ behavior: "smooth" });
     },
   },
 });
@@ -104,6 +151,7 @@ header.remove {
 header.active {
   animation: slideIn 500ms ease-out forwards;
 }
+
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -125,17 +173,17 @@ header.active {
     transform: translateX(0);
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .menu {
     display: none;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .navbar nav ul {
     gap: 1rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   nav ul {
     display: none;
   }
