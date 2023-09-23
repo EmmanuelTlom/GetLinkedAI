@@ -296,5 +296,10 @@ h5.create {
       }
     }
   }
+
+  .inputs .input input::placeholder,
+  .inputs .input textarea::placeholder {
+    font-size: 13px;
+  }
 }
 </style>
