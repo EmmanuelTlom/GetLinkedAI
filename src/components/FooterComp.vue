@@ -1,0 +1,118 @@
+<template>
+  <footer class="container q-pt-xl">
+    <div class="footer_grid">
+      <div class="left">
+        <h2 class="footer_main">get<span class="text-primary">linked</span></h2>
+        <p class="terms q-mt-sm">
+          Getlinked Tech Hackathon is a technology innovation program
+          established by a group of organizations with the aim of showcasing
+          young and talented individuals in the field of technology
+        </p>
+
+        <p class="terms q-mt-xl">
+          Terms of Use <span class="q-mx-md text-primary">|</span> Privacy
+          Policy
+        </p>
+      </div>
+      <div class="middle">
+        <h5 class="section_paragraph text-primary">Useful Links</h5>
+        <div class="links">
+          <ul>
+            <li><router-link to="" class="terms"> Overview </router-link></li>
+            <li><router-link to="" class="terms"> Timeline </router-link></li>
+            <li><router-link to="" class="terms"> FAQs </router-link></li>
+            <li>
+              <router-link to="" class="terms"> Register </router-link>
+            </li>
+            <li style="gap: 1rem" class="row items-center no-wrap">
+              <span class="text-primary terms"> Follow us</span>
+              <span style="gap: 1rem" class="row items-center">
+                <img
+                  style="width: 24px; height: 24px; flex-shrink: 0"
+                  src="../assets/ig.svg"
+                  alt="" />
+                <img
+                  style="width: 24px; height: 24px; flex-shrink: 0"
+                  src="../assets/x.svg"
+                  alt="" />
+                <img
+                  style="width: 24px; height: 24px; flex-shrink: 0"
+                  src="../assets/fb.svg"
+                  alt="" />
+                <img
+                  style="width: 24px; height: 24px; flex-shrink: 0"
+                  src="../assets/in.svg"
+                  alt=""
+              /></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <h5 class="section_paragraph text-primary">Contact Us</h5>
+        <div class="links">
+          <ul>
+            <li style="gap: 1rem" class="row items-center no-wrap">
+              <img
+                style="width: 12px; height: 12px; flex-shrink: 0"
+                src="../assets/call.svg"
+                alt=""
+              />
+              <a href="" class="terms"> +234 679 81819 </a>
+            </li>
+            <li style="gap: 1rem" class="row no-wrap">
+              <img
+                style="width: 12px; height: 12px; flex-shrink: 0"
+                src="../assets/location.svg"
+                alt=""
+              />
+              <address class="terms">
+                27,Alara Street <br />
+                Yaba 100012 <br />
+                Lagos State
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="q-my-lg terms text-center">
+      All rights reserved. © getlinked Ltd.
+    </p>
+
+    <div class="stars_">
+      <img
+        style="width: 20px; height: 26px"
+        class="stars"
+        src="../assets/whitestar.svg"
+        alt=""
+      />
+      <img
+        style="width: 26px; height: 32px"
+        class="stars"
+        src="../assets/sata.svg"
+        alt=""
+      />
+
+      <img
+        style="width: 16px; height: 22px"
+        class="stars"
+        src="../assets/whitestar.svg"
+        alt=""
+      />
+      <img
+        style="width: 15px; height: 20px"
+        class="stars"
+        src="../assets/blurstar.svg"
+        alt=""
+      />
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style lang="sass" scoped></style>
