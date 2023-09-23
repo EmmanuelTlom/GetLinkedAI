@@ -132,7 +132,7 @@
     <section class="rules">
       <div class="grid alt container">
         <div class="left">
-          <img data-reveal src="../assets/rules.svg" alt="" />
+          <img data-reveal src="../assets/rule.png" alt="" />
         </div>
         <div class="right">
           <h4 data-reveal class="section_maintext">
@@ -169,7 +169,7 @@
     <section class="judge">
       <div class="grid container">
         <div class="left">
-          <img data-reveal src="../assets/judge.svg" alt="" />
+          <img data-reveal src="../assets/judg.png" alt="" />
         </div>
         <div class="right">
           <h4 data-reveal class="section_maintext">
@@ -250,7 +250,7 @@
     <section id="faq" class="faq">
       <div class="grid alt container">
         <div class="left">
-          <img data-reveal src="../assets/faq.svg" alt="" />
+          <img data-reveal src="../assets/faq.png" alt="" />
           <div class="qmarks">
             <img
               style="width: 114px; height: 71px"
@@ -379,7 +379,7 @@
     <section class="sec_prizes">
       <div class="grid container">
         <div class="left">
-          <img data-reveal src="../assets/trophy.svg" alt="" />
+          <img data-reveal src="../assets/trophyimg.png" alt="" />
         </div>
         <div class="right">
           <div class="head_text">
@@ -522,7 +522,7 @@
     <section class="privacy_section">
       <div class="grid alt container">
         <div class="left">
-          <img data-reveal src="../assets/privacykey.svg" alt="" />
+          <img data-reveal src="../assets/privacy.png" alt="" />
           <img data-reveal src="../assets/privacyshield.svg" alt="" />
         </div>
         <div class="right">

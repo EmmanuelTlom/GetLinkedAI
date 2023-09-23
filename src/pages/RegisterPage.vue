@@ -2,7 +2,7 @@
   <section class="contact">
     <div class="grid container">
       <div class="left">
-        <img src="../assets/designer.svg" alt="" />
+        <img src="../assets/designer.png" alt="" />
       </div>
       <div class="right">
         <h4 class="section_maintext">
@@ -235,34 +235,41 @@ let data = ref({
   group_size: "",
 });
 let register = () => {
-  loading.value = true;
-  axios
-    .post("https://backend.getlinked.ai/hackathon/registration", data.value)
-    .then((response) => {
-      console.log(response);
-      Notify.create({
-        message: "Your application was successful",
-        color: "green",
-        position: "top",
-      });
-      loading.value = false;
-      data.value = {
-        privacy_poclicy_accepted: true,
-        category: "",
-        group_size: "",
-      };
-      dialog.value = true;
-    })
-    .catch(({ response }) => {
-      console.log(response);
-      loading.value = false;
-      Notify.create({
-        message: response.data.message,
-        color: "red",
-        position: "bottom",
-        actions: [{ icon: "close", color: "white" }],
-      });
+  if (!data.value.privacy_poclicy_accepted) {
+    Notify.create({
+      message: "You need to agree to our terms and conditions",
+      color: "green",
+      position: "top",
     });
+    loading.value = true;
+    axios
+      .post("https://backend.getlinked.ai/hackathon/registration", data.value)
+      .then((response) => {
+        console.log(response);
+        Notify.create({
+          message: "Your application was successful",
+          color: "green",
+          position: "top",
+        });
+        loading.value = false;
+        data.value = {
+          privacy_poclicy_accepted: true,
+          category: "",
+          group_size: "",
+        };
+        dialog.value = true;
+      })
+      .catch(({ response }) => {
+        console.log(response);
+        loading.value = false;
+        Notify.create({
+          message: response.data.message,
+          color: "red",
+          position: "bottom",
+          actions: [{ icon: "close", color: "white" }],
+        });
+      });
+  }
 };
 
 onMounted(async () => {

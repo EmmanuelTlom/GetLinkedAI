@@ -683,6 +683,12 @@ form .q-checkbox__bg {
 
   .right {
     position: relative;
+
+    div {
+      .section_paragraph {
+        margin: 1rem 0;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
