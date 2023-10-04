@@ -93,7 +93,7 @@
                 src="../assets/location.svg"
                 alt=""
               />
-              <address data-reveal class="terms">
+              <address class="terms">
                 27,Alara Street <br />
                 Yaba 100012 <br />
                 Lagos State

@@ -238,9 +238,10 @@ let register = () => {
   if (!data.value.privacy_poclicy_accepted) {
     Notify.create({
       message: "You need to agree to our terms and conditions",
-      color: "green",
+      color: "red",
       position: "top",
     });
+  } else {
     loading.value = true;
     axios
       .post("https://backend.getlinked.ai/hackathon/registration", data.value)
@@ -263,7 +264,7 @@ let register = () => {
         console.log(response);
         loading.value = false;
         Notify.create({
-          message: response.data.message,
+          message: "Please recheck credentials",
           color: "red",
           position: "bottom",
           actions: [{ icon: "close", color: "white" }],

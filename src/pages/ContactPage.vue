@@ -145,7 +145,7 @@
 
       <p class="q-mt-md terms text-white text-center">
         Yes, it was easy and you did it! <br />
-        <span class="row items-center no-wrap">
+        <span class="row justify-center items-center no-wrap">
           check your mail box for next step
           <img
             style="width: 20px; height: 20px"
@@ -220,7 +220,7 @@ let contact = () => {
       // console.log(response);
       loading.value = false;
       Notify.create({
-        message: response.data.message,
+        message: "Please recheck credentials",
         color: "red",
         position: "bottom",
         actions: [{ icon: "close", color: "white" }],
